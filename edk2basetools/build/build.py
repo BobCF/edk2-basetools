@@ -70,6 +70,7 @@ gSupportedTarget = ['all', 'genc', 'genmake', 'modules', 'libraries', 'fds', 'cl
 ## build configuration file
 gBuildConfiguration = "target.txt"
 gToolsDefinition = "tools_def.txt"
+gTest = "gTest"
 
 TemporaryTablePattern = re.compile(r'^_\d+_\d+_[a-fA-F0-9]+$')
 TmpTableDict = {}
