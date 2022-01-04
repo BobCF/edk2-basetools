@@ -12,6 +12,8 @@ parameters:
 steps:
 - checkout: self
   clean: true
+- checkout: https://github.com/BobCF/edk2.git
+  clean: true
 
 - task: UsePythonVersion@0
   inputs:
