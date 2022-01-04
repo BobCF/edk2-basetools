@@ -72,3 +72,6 @@ See the [github team](https://github.com/orgs/tianocore/teams/edk-ii-tool-mainta
 ## Documentation
 
 See the github repo __docs__ folder
+
+## CI
+[![Build Status](https://dev.azure.com/bobcfeng/edk2-bob/_apis/build/status/BobCF.edk2-basetools?branchName=master)](https://dev.azure.com/bobcfeng/edk2-bob/_build/latest?definitionId=6&branchName=master)
