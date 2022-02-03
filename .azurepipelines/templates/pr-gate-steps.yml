@@ -7,18 +7,18 @@
 # SPDX-License-Identifier: BSD-2-Clause-Patent
 ##
 
-parameters:
-  tool_chain_tag: ''
-  build_pkgs: ''
-  build_targets: ''
-  build_archs: ''
-
 resources:
   repositories:
   - repository: edk2
     type: github
     endpoint: BobCF
     name: BobCF/edk2
+
+parameters:
+  tool_chain_tag: ''
+  build_pkgs: ''
+  build_targets: ''
+  build_archs: ''
 
 steps:
 - checkout: self
