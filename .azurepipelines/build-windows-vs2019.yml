@@ -12,6 +12,13 @@ pr:
 - master
 - basetools-ci
 
+resources:
+  repositories:
+  - repository: edk2
+    type: github
+    endpoint: BobCF
+    name: BobCF/edk2
+
 jobs:
 - template: templates/pr-gate-build-job.yml
   parameters:
