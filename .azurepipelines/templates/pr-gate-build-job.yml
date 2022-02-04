@@ -56,6 +56,11 @@ jobs:
         # to build them.
         Build.Pkgs: 'ArmVirtPkg,EmulatorPkg,OvmfPkg'
         Build.Targets: 'DEBUG,RELEASE,NO-TARGET'
+      TARGET_OVMF:
+        # For Platforms only check code. Leave it to Platform CI
+        # to build them.
+        Build.Pkgs: 'OvmfPkg'
+        Build.Targets: 'DEBUG,RELEASE,NO-TARGET'
 
   workspace:
     clean: all
