@@ -51,7 +51,7 @@ steps:
   condition: eq(variables['Build.Reason'], 'PullRequest')
 
 # install spell check prereqs
-- template: spell-check-prereq-steps.yml
+#- template: spell-check-prereq-steps.yml
 
 # Build repo
 - task: CmdLine@1
