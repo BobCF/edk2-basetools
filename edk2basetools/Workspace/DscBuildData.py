@@ -36,6 +36,7 @@ import subprocess
 from functools import reduce
 from edk2basetools.Common.Misc import SaveFileOnChange
 from edk2basetools.Workspace.BuildClassObject import PlatformBuildClassObject, StructurePcd, PcdClassObject, ModuleBuildClassObject
+from Common.TargetTxtClassObject import gDefaultTargetTxtFile
 from collections import OrderedDict, defaultdict
 
 def _IsFieldValueAnArray (Value):

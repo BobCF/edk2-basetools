@@ -31,6 +31,7 @@ from edk2basetools.Common.BuildVersion import gBUILD_VERSION
 from edk2basetools.Common.MultipleWorkspace import MultipleWorkspace as mws
 from edk2basetools.Common.BuildToolError import FatalError, GENFDS_ERROR, CODE_ERROR, FORMAT_INVALID, RESOURCE_NOT_AVAILABLE, FILE_NOT_FOUND, OPTION_MISSING, FORMAT_NOT_SUPPORTED, OPTION_VALUE_INVALID, PARAMETER_INVALID
 from edk2basetools.Workspace.WorkspaceDatabase import WorkspaceDatabase
+from Common.TargetTxtClassObject import gDefaultTargetTxtFile
 
 from .FdfParser import FdfParser, Warning
 from .GenFdsGlobalVariable import GenFdsGlobalVariable
