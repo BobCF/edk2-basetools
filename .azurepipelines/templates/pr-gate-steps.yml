@@ -89,7 +89,7 @@ steps:
   condition: and( succeededOrFailed(),gt(variables.pkg_count, 0))
   inputs:
     testResultsFormat: 'JUnit' # Options: JUnit, NUnit, VSTest, xUnit
-    testResultsFiles: 'Build/TestSuites.xml'
+    testResultsFiles: 'edk2/Build/TestSuites.xml'
     #searchFolder: '$(System.DefaultWorkingDirectory)' # Optional
     mergeTestResults: true # Optional
     testRunTitle: $(System.JobName) # Optional
@@ -104,7 +104,7 @@ steps:
   condition: and( succeededOrFailed(), gt(variables.pkg_count, 0))
   inputs:
     testResultsFormat: 'JUnit' # Options: JUnit, NUnit, VSTest, xUnit
-    testResultsFiles: 'Build/**/*.result.xml'
+    testResultsFiles: 'edk2/Build/**/*.result.xml'
     #searchFolder: '$(System.DefaultWorkingDirectory)' # Optional
     mergeTestResults: false # Optional
     testRunTitle: ${{ parameters.build_pkgs }} # Optional
@@ -117,7 +117,7 @@ steps:
   displayName: "Copy build logs"
   inputs:
     targetFolder: '$(Build.ArtifactStagingDirectory)'
-    SourceFolder: 'Build'
+    SourceFolder: 'edk2/Build'
     contents: |
       BUILDLOG_*.txt
       BUILDLOG_*.md
