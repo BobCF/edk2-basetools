@@ -21,9 +21,6 @@ jobs:
   #Use matrix to speed up the build process
   strategy:
     matrix:
-      TARGET_ARM_ARMPLATFORM:
-        Build.Pkgs: 'ArmPkg,ArmPlatformPkg'
-        Build.Targets: 'DEBUG,RELEASE,NO-TARGET,NOOPT'
       TARGET_MDE_CPU:
         Build.Pkgs: 'MdePkg,UefiCpuPkg'
         Build.Targets: 'DEBUG,RELEASE,NO-TARGET,NOOPT'
@@ -50,16 +47,6 @@ jobs:
         Build.Targets: 'DEBUG,RELEASE,NO-TARGET'
       TARGET_UEFIPAYLOAD:
         Build.Pkgs: 'UefiPayloadPkg'
-        Build.Targets: 'DEBUG,RELEASE,NO-TARGET'
-      TARGET_PLATFORMS:
-        # For Platforms only check code. Leave it to Platform CI
-        # to build them.
-        Build.Pkgs: 'ArmVirtPkg,EmulatorPkg,OvmfPkg'
-        Build.Targets: 'DEBUG,RELEASE,NO-TARGET'
-      TARGET_OVMF:
-        # For Platforms only check code. Leave it to Platform CI
-        # to build them.
-        Build.Pkgs: 'OvmfPkg'
         Build.Targets: 'DEBUG,RELEASE,NO-TARGET'
 
   workspace:
