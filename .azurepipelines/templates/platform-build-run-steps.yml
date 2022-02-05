@@ -45,7 +45,7 @@ steps:
     versionSpec: "3.8.x"
     architecture: "x64"
 
-- script: pip install -r pip-requirements.txt --upgrade
+- script: pip install -r edk2/pip-requirements.txt --upgrade
   displayName: 'Install/Upgrade pip modules'
   
 - script: pip install -e edk2-basetools --upgrade
