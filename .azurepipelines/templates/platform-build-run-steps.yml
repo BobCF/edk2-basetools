@@ -37,6 +37,7 @@ parameters:
 
 steps:
 - checkout: self
+- checkout: edk2
   clean: true
   fetchDepth: 1
 
