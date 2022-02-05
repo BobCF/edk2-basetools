@@ -187,3 +187,5 @@ jobs:
         - bash: sudo apt-get install qemu
           displayName: Install qemu
           condition: and(gt(variables.pkg_count, 0), succeeded())
+        - bash: sudo apt-get install mtools
+          displayName: 'Install mtools'
