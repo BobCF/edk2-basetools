@@ -120,53 +120,6 @@ jobs:
             Build.Target: "NOOPT"
             Run.Flags: $(run_flags)
             Run: $(should_run)
-
-          AMDSEV_X64_DEBUG:
-            Build.File: "edk2/$(package)/PlatformCI/AmdSevBuild.py"
-            Build.Arch: "X64"
-            Build.Flags: ""
-            Build.Target: "DEBUG"
-            # restricted + stripped down build
-            # can't boot to uefi shell -> skip test
-            Run.Flags: "QEMU_SKIP=TRUE"
-            Run: $(should_run)
-
-          BHYVE_X64_DEBUG:
-            Build.File: "edk2/$(package)/PlatformCI/BhyveBuild.py"
-            Build.Arch: "X64"
-            Build.Flags: ""
-            Build.Target: "DEBUG"
-            # this build is for freebsd bhyve not qemu-kvm
-            Run.Flags: "QEMU_SKIP=TRUE"
-            Run: $(should_run)
-
-          CLOUDHV_X64_DEBUG:
-            Build.File: "edk2/$(package)/PlatformCI/CloudHvBuild.py"
-            Build.Arch: "X64"
-            Build.Flags: ""
-            Build.Target: "DEBUG"
-            # this build is for cloud-hypervisor not qemu-kvm
-            Run.Flags: "QEMU_SKIP=TRUE"
-            Run: $(should_run)
-
-          MICROVM_X64_DEBUG:
-            Build.File: "edk2/$(package)/PlatformCI/MicrovmBuild.py"
-            Build.Arch: "X64"
-            Build.Flags: ""
-            Build.Target: "DEBUG"
-            # no storage supported by microvm build
-            # can't boot to uefi shell -> skip test
-            Run.Flags: "QEMU_SKIP=TRUE"
-            Run: $(should_run)
-
-          OVMF_XEN_X64_DEBUG:
-            Build.File: "edk2/$(package)/PlatformCI/XenBuild.py"
-            Build.Arch: "X64"
-            Build.Flags: ""
-            Build.Target: "DEBUG"
-            # this build is for xen not qemu-kvm
-            Run.Flags: "QEMU_SKIP=TRUE"
-            Run: $(should_run)
     workspace:
       clean: all
 
