@@ -11,6 +11,7 @@
 trigger:
 - master
 - basetools-ci
+- newmaster
 pr:
 - master
 - basetools-ci
